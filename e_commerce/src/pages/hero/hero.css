@@ -1,0 +1,62 @@
+/* .fresh_sales_slider{
+    /* border: 2px solid red; */
+
+.fresh_sales_swiper  {
+    /* padding: 30px; */
+    /* border: 2px solid red; */
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    /* width: 100%; */
+    /* gap: 1000px; */
+}
+.today_head {
+    border-left: 15px solid #DB4444 ;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 10px;
+    font-size: 20px;
+    color: #DB4444;
+}
+.flash_sales{
+    font-size: 25px;
+}
+section{
+    padding: 20px ;
+}
+.best_selling{
+    /* display: grid; */
+    /* flex-direction: column; */
+    /* gap: 50px; */
+    /* margin-bottom: 20px; */
+}
+.best_selling .best_selling_products{
+    display: grid;
+    /* border: 2px solid red; */
+    grid-template-columns: repeat(auto-fit,minmax(300px,300px));
+    max-width: 1350px;
+    margin-inline: auto;
+    justify-content: center;
+    gap: 15px;
+
+}
+.best_selling_head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+}
+.best_selling_head h5{
+    font-size: 35px;
+    border-left: 20px solid red;
+    padding: 0px 0px 0px 30px;
+    /* border: 2px solid  red; */
+}
+.best_selling_btn button{
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: 10px; */
+    font-size: 20px;
+}
