@@ -39,7 +39,6 @@ const Navbar = () => {
                         <li><a href="">Contact</a></li> 
                         <li><Link to={"/about"}>About</Link></li> 
                         <li><Link to={"/signup"}>Signup</Link></li>
-                        <p>{JSON.stringify(isLoggedIn)}</p>
 
                         {!isLoggedIn ? <li><Link to={"/signin"}>Login</Link></li> : <li onClick={() => {
                             localStorage.removeItem('loggedIn');

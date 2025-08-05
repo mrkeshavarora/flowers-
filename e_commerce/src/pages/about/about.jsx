@@ -29,7 +29,7 @@ const About = () => {
             </div>
             <div className="member">
             <div className="member_img">
-                      <img src="./images/pd_img.png" alt="" />
+                    <img src="./images/pd_img.png" alt="" />
                 </div>
                 <div className="member_detail">
                     <h3>Will Smith</h3>
