@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './navbar.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -6,6 +6,17 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom'
 const Navbar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('loggedIn'));
+
+    useEffect(() => {
+        const handleStorageChange = () => {
+          setIsLoggedIn(localStorage.getItem('loggedIn'));
+        };
+        // handleStorageChange();
+        window.addEventListener('storage', handleStorageChange);
+        return () => window.removeEventListener('storage', handleStorageChange);
+      }, []);
+    
 
     return (
         <>
@@ -28,7 +39,13 @@ const Navbar = () => {
                         <li><a href="">Contact</a></li> 
                         <li><Link to={"/about"}>About</Link></li> 
                         <li><Link to={"/signup"}>Signup</Link></li>
-                        <li><Link to={"/signin"}>Signin</Link></li>
+                        <p>{JSON.stringify(isLoggedIn)}</p>
+
+                        {!isLoggedIn ? <li><Link to={"/signin"}>Login</Link></li> : <li onClick={() => {
+                            localStorage.removeItem('loggedIn');
+                            setIsLoggedIn(null); // <-- update state immediately
+                        }}><Link to={"/signin"}>Logout</Link></li>}
+                        {/* <li><Link to={"/signin"}>Signin</Link></li> */}
                         {/* <li><Link to={"/signup"}>Sign up</Link></li>
                         <li><Link to={"/signin"}>Sign in</Link></li> */}
                     </ul>
