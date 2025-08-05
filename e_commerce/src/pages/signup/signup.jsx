@@ -14,7 +14,7 @@ const Signup = () => {
     function signup(e) {
         e.preventDefault();
         const check=JSON.parse(localStorage.getItem("users") || "[]");
-        const exists = check.some( u => u.email === user.email);
+        let exists = check.some( u => u.email === user.email);
         if (user.name.length < 3 || user.email.length < 3 || user.password.length < 3) {
             alert("invalid input");
             exists=false;   
