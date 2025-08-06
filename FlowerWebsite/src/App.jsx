@@ -12,6 +12,7 @@ function App() {
   return (
     <>
       <Header/>
+      <h1>sjkbk</h1>
       <Routes>
         <Route path="/" element={<Hero />} />
       </Routes>
