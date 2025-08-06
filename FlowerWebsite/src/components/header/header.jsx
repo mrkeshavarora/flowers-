@@ -18,7 +18,7 @@ const Header = () => {
                 <div className="logo">
 
                 </div>
-                <ul>
+                {/* <ul>
                     <li><Link>FLowers</Link></li>
                     <li><Link>Cakes</Link></li>
                     <li><Link>Balloons</Link></li>
@@ -27,7 +27,7 @@ const Header = () => {
                     <li><Link>FLowers</Link></li>
                     <li><Link>FLowers</Link></li>
                     
-                </ul>
+                </ul> */}
             </div>
         </header>
     </>
